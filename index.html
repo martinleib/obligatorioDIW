@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
 
@@ -53,38 +55,35 @@
           <div class="artists-flex">
             <div class="item artists-picture-1">
               <h1>PARTYNEXTDOOR</h1>
-              <p>Night-time sounding R&B and heavy basslines.</p>
+              <p>Night-time sounding R&B and moody lyrics</p>
             </div>
             <div class="item bigger-item artists-picture-2">
               <h1>Post Malone</h1>
-              <p>Instrospective lyrics over hip-hop beats with rock influence.</p>
+              <p>Instrospective lyrics over hip-hop beats with rock influence</p>
             </div>
           </div>
-
           <div class="artists-flex">
             <div class="item bigger-item artists-picture-3">
               <h1>Don Toliver</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Atmospheric, melodic, trap-influenced R&B</p>
             </div>
             <div class="item artists-picture-4">
               <h1>Travis Scott</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Punchy basslines, energetic lyrics over rap beats</p>
             </div>
           </div>
-
           <div class="artists-flex">
             <div class="item artists-picture-5">
               <h1>Playboi Carti</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>You'll need to listen to it a few times to understand it</p>
             </div>
-
             <div class="item artists-picture-6">
               <h1>Lil Uzi Vert</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Virtual sounding beats and energetic lyrics</p>
             </div>
             <div class="item artists-picture-7">
               <h1>Metro Boomin</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p>Dark, atmospheric beats with heavy trap influence</p>
             </div>
           </div>
         </div>
@@ -177,7 +176,10 @@
         <div class="tickets-grid-wrapper">
           <form action="#" method="post">
             <div class="tickets-grid-item text-uppercase roboto-condensed">
-              <h2>One Day Pass</h2>
+              <div class="tickets-header-flex">
+                <h2>One Day Pass</h2>
+                <i class="fa-solid fa-star"></i>
+              </div>
               <p>Includes tickets</p>
               <h2>99 USD</h2>
               <ul>
@@ -209,7 +211,7 @@
             </div>
           </form>
 
-          <form action="#" method="post">
+          <form action="#" method="post" autocomplete="on">
             <div class="tickets-grid-item roboto-condensed text-uppercase">
               <h2 class="text-uppercase">Personal Info</h2>
               <input type="text" placeholder="FULL NAME" class="fullsize-input" required />
@@ -217,6 +219,7 @@
               <input type="text" placeholder="EMAIL" class="fullsize-input" required />
               <br />
               <select class="fullsize-input">
+                <option value="x" disabled selected>SELECT AMOUNT OF TICKETS</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -224,10 +227,12 @@
                 <option value="5">5</option>
               </select>
               <br />
-              <input type="radio" name="typeAccess" id="Regular" checked />
-              <label for="Regular">Regular</label>
-              <input type="radio" name="typeAccess" id="VIP" class="distanced" />
-              <label for="VIP">VIP Access</label>
+              <div class="tickets-radio-input">
+                <input type="radio" name="typeAccess" id="Regular" checked />
+                <label for="Regular">Regular</label>
+                <input type="radio" name="typeAccess" id="VIP" class="distanced" />
+                <label for="VIP">VIP Access</label>
+              </div>
 
               <div class="tickets-footer">
                 <div class="tickets-tos-button">
@@ -255,24 +260,28 @@
 
         <div class="photos-grid-wrapper">
           <div class="photos-grid-item">
-            <picture>
+            <figure>
               <img src="./img/rollingloud-stage1.jpeg" alt="Stage Image 1" />
-            </picture>
+              <figcaption>STAGE 1</figcaption>
+            </figure>
           </div>
           <div class="photos-grid-item">
-            <picture>
+            <figure>
               <img src="./img/rollingloud-stage2.jpeg" alt="Stage Image 2" />
-            </picture>
+              <figcaption>STAGE 2</figcaption>
+            </figure>
           </div>
           <div class="photos-grid-item">
-            <picture>
+            <figure>
               <img src="./img/rollingloud-stage3.jpeg" alt="Stage Image 3" />
-            </picture>
+              <figcaption>ROLLING LOUD 2023</figcaption>
+            </figure>
           </div>
           <div class="photos-grid-item">
-            <picture>
+            <figure>
               <img src="./img/rollingloud-stage4.jpeg" alt="Stage Image 4" />
-            </picture>
+              <figcaption>KANYE WEST @ ROLLING LOUD</figcaption>
+            </figure>
           </div>
         </div>
       </div>

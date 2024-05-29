@@ -149,12 +149,10 @@ main {
 }
 
 .artists-background-container {
-  background: linear-gradient(
-    to bottom,
-    rgba(17, 17, 17, 0.1),
-    rgb(17, 17, 17, 0.95),
-    rgba(34, 34, 34, 1)
-  );
+  background: linear-gradient(to bottom,
+      rgba(17, 17, 17, 0.1),
+      rgb(17, 17, 17, 0.95),
+      rgba(34, 34, 34, 1));
 }
 
 .artists-header {
@@ -325,14 +323,16 @@ main {
 }
 
 .lineup-container table td:nth-child(1) {
-  text-align: center;
+  text-align: left;
 }
 
 .lineup-container table td img {
-  display: block;
-  margin: 0 auto 5px;
-  width: 50px;
+  overflow: hidden;
+  display: inline-block;
+  width: 40px;
   border-radius: 50%;
+  margin: 0 15px 5px;
+  vertical-align: middle;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
@@ -352,12 +352,10 @@ main {
 
 /* tickets */
 .tickets-background-container {
-  background: linear-gradient(
-    to bottom,
-    rgba(34, 34, 34),
-    rgba(34, 34, 34, 0.05),
-    rgba(17, 17, 17)
-  );
+  background: linear-gradient(to bottom,
+      rgba(34, 34, 34),
+      rgba(34, 34, 34, 0.05),
+      rgba(17, 17, 17));
 }
 
 .tickets-container {
@@ -378,6 +376,16 @@ main {
 
 .tickets-header {
   padding-bottom: var(--paddingMargin);
+}
+
+.tickets-header-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tickets-header-flex i {
+  color: var(--black);
 }
 
 .tickets-container h1 {
@@ -420,16 +428,20 @@ main {
   height: 41%;
 }
 
+select {
+  text-indent: 0.35rem;
+}
+
 .tickets-select-button a {
   display: flex;
 
-  color: var(--blue);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--black);
 
   width: 250px;
   height: 50px;
 
-  border-radius: 20px;
+  border-radius: 5px;
 
   font-size: 2rem;
   text-decoration: none;
@@ -443,6 +455,10 @@ main {
 .tickets-select-button a:hover {
   background-color: var(--black);
   color: var(--white);
+}
+
+.tickets-radio-input {
+  margin-top: 1rem;
 }
 
 ul {
@@ -485,18 +501,18 @@ select option {
 }
 
 .tickets-purchase-button .tickets-purchase-button-input {
+  font-family: "Roboto Condensed", sans-serif !important;
+
   display: flex;
 
-  color: var(--blue);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--black);
 
   width: 250px;
   height: 50px;
 
-  font-family: "Roboto Condensed", sans-serif !important;
-
   border: 0;
-  border-radius: 10px;
+  border-radius: 5px;
 
   font-size: 2rem;
   text-decoration: none;
@@ -508,8 +524,7 @@ select option {
 }
 
 .tickets-purchase-button .tickets-purchase-button-input:hover {
-  background-color: var(--black);
-  color: var(--white);
+  cursor: pointer;
 }
 
 .disabled-item {
@@ -545,20 +560,32 @@ select option {
   font-size: var(--bigText);
 }
 
+figure {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2rem;
+}
+
+figcaption {
+  padding-top: 0.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 .photos-container p {
   font-size: 1rem;
 }
 
 .photos-grid-wrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr 3fr 2fr;
-  height: 75vh;
+  height: auto;
 }
 
 .photos-grid-item {
   margin: 0 0 1rem 1rem;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 .photos-grid-item:nth-child(1) {
@@ -585,6 +612,7 @@ select option {
   scale: 1.01;
 }
 
+
 /* footer */
 footer {
   width: 100%;
@@ -602,12 +630,13 @@ footer img {
 }
 
 .footer-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.footer-items a, .footer-items p {
+.footer-items a,
+.footer-items p {
   margin-right: 30px;
   padding: 10px;
 
@@ -627,7 +656,7 @@ footer img {
 
 /* clases para manipulación de texto */
 .roboto-condensed {
-  font-family: "Roboto Condensed", sans-serif !important;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .jersey-25 {
